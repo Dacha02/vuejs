@@ -1,6 +1,12 @@
-Commands:
-git clone PROJECT_URL
 
-Start the project:
-npm install
-npm run dev
+# Project commands
+
+Download project: 
+
+- git clone PROJECT_URL
+
+Start project:
+
+- npm install
+
+- npm run dev
