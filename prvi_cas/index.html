@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>VUE JS</title>
+</head>
+
+<body>
+    <h1>Uvod u vue js</h1>
+
+    <!-- <h1>test</h1> -->
+
+    <div id="app">
+
+        <p>Poruka iz app.js: {{message}} {{typeof(message)}}</p>
+        <p>Omiljeni broj: {{omiljeni_broj}} {{typeof(omiljeni_broj)}}</p>
+
+        <h1>Podaci o predavacu</h1>
+        <!-- <p>ime i prezime predavaca: {{ime+' '+prezime}}</p> -->
+        <!-- <p>ime i prezime predavaca: {{predavac.ime}} {{predavac.prezime}}</p> -->
+        <p>
+            ime i prezime preko methods: {{funkcijaVratiImePrezime()}}
+        </p>
+        <p>Ime i prezime preko computed: {{vratiImePrezime}}</p>
+        <!-- <p>Predmet: {{predavac.predmet}}</p> -->
+        <p>Godine: {{predavac.godine}}</p>
+
+        <!-- <p>
+            <button v-on:click="predavac.godine--">Smanji</button>
+            <button v-on:click="predavac.godine++">Povecaj</button>
+        </p> -->
+
+        <p>
+            <button @click="smanjiGodine">Smanji</button>
+            <button @click="povecajGodine">Povecaj</button>
+        </p>
+
+
+
+        <hr>
+
+        <izlistaj-predmete :predmeti="predavac.predmeti"></izlistaj-predmete>
+
+        <hr>
+
+        <h2>Dodavanje predmeta</h2>
+
+        <p>{{greska}}</p>
+        <p>{{radi}}</p>
+
+        <input type="text" v-model="predmet"> {{predmet}}
+        <button @click="dodajPredmet">Dodaj</button>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
